@@ -1,7 +1,7 @@
 # ADD COMMENT REQUIREMENTS HERE
 from Festival import *
+from festivalObjects import *
 
-import json
 
 # Print welcome statement
 print('Welcome to "My Line-Up", an application for setting your\n own personal line-up for music festival set lists.\n');
@@ -9,107 +9,34 @@ print('Welcome to "My Line-Up", an application for setting your\n own personal l
 # Print festival options 
 print('Here are the upcoming festivals:\n')
 
-print(' 1. Coachella\n 2. Stagecoach\n 3. Rolling Loud\n 4. Aftershock\n 5. Lollapalooza');
+print(' 1. ' + fest1.name + '\n 2. ' + fest2.name + '\n 3. ' + fest3.name + '\n 4. ' + fest4.name + '\n 5. ' + fest5.name);
 
-# Declare class for festival names (create new objects for each festival)
 
-# Class for festival info
+# festInfo function to call within festivalSelection
+def festInfo(obj):
+  print('\nYou have selected ' + obj.name + obj.greeting)
+  print('\nHere is the lineup for ' + obj.name + ':\n')
+  for i in obj.lineup :
+      print( i, "-------------", obj.lineup[i], sep = '\t') 
 
-# Create objects for festivals
-fest1 = Festival('Coachella', '4/26/2023', '. Awesome!', {
-      '9:00AM - 10:00AM': 'BAND',
-      '10:00AM - 11:00AM': 'BAND',
-      '12:00PM - 1:00PM': 'BAND',
-      '1:00PM - 2:00PM': 'BAND',
-      '2:00PM - 3:00PM': 'BAND',
-      '3:00PM - 4:00PM': 'BAND',
-      '5:00PM - 6:00PM': 'BAND',
-      '6:00PM - 7:00PM': 'BAND',
-      '7:00PM - 8:00PM': 'BAND',
-      '8:00PM - 9:00PM': 'BAND',
-      '9:00PM - 10:00PM': 'BAND'
-})
-fest2 = Festival('Stagecoach', '4/26/2023', '. Yee Haw!', {
-      '9:00AM - 10:00AM': 'BAND',
-      '10:00AM - 11:00AM': 'BAND',
-      '12:00PM - 1:00PM': 'BAND',
-      '1:00PM - 2:00PM': 'BAND',
-      '2:00PM - 3:00PM': 'BAND',
-      '3:00PM - 4:00PM': 'BAND',
-      '5:00PM - 6:00PM': 'BAND',
-      '6:00PM - 7:00PM': 'BAND',
-      '7:00PM - 8:00PM': 'BAND',
-      '8:00PM - 9:00PM': 'BAND',
-      '9:00PM - 10:00PM': 'BAND'
-})
-fest3 = Festival('Rolling Loud', '4/26/2023','. Rad!', {
-      '9:00AM - 10:00AM': 'BAND',
-      '10:00AM - 11:00AM': 'BAND',
-      '12:00PM - 1:00PM': 'BAND',
-      '1:00PM - 2:00PM': 'BAND',
-      '2:00PM - 3:00PM': 'BAND',
-      '3:00PM - 4:00PM': 'BAND',
-      '5:00PM - 6:00PM': 'BAND',
-      '6:00PM - 7:00PM': 'BAND',
-      '7:00PM - 8:00PM': 'BAND',
-      '8:00PM - 9:00PM': 'BAND',
-      '9:00PM - 10:00PM': 'BAND'
-})
-fest4 = Festival('Aftershock', '4/26/2023', '. Rock On!', {
-      '9:00AM - 10:00AM': 'BAND',
-      '10:00AM - 11:00AM': 'BAND',
-      '12:00PM - 1:00PM': 'BAND',
-      '1:00PM - 2:00PM': 'BAND',
-      '2:00PM - 3:00PM': 'BAND',
-      '3:00PM - 4:00PM': 'BAND',
-      '5:00PM - 6:00PM': 'BAND',
-      '6:00PM - 7:00PM': 'BAND',
-      '7:00PM - 8:00PM': 'BAND',
-      '8:00PM - 9:00PM': 'BAND',
-      '9:00PM - 10:00PM': 'BAND'
-})
-fest5 = Festival('Lollapalooza', '4/26/2023', '. Sweet!', {
-      '9:00AM - 10:00AM': 'BAND',
-      '10:00AM - 11:00AM': 'BAND',
-      '12:00PM - 1:00PM': 'BAND',
-      '1:00PM - 2:00PM': 'BAND',
-      '2:00PM - 3:00PM': 'BAND',
-      '3:00PM - 4:00PM': 'BAND',
-      '5:00PM - 6:00PM': 'BAND',
-      '6:00PM - 7:00PM': 'BAND',
-      '7:00PM - 8:00PM': 'BAND',
-      '8:00PM - 9:00PM': 'BAND',
-      '9:00PM - 10:00PM': 'BAND'
-})
 
 # Function to select appropriate festival
 def festivalSelection(userFestival):
   if  userFestival == '1':
-    name = fest1.name
-    print('\nYou have selected ' + fest1.name + fest1.greeting)
-    print('\nHere is the lineup: \n')
-    print(json.dumps(fest1.lineup, indent=4))
-
-
+    festInfo(fest1)
+    
   elif (userFestival == '2'):
-    name = fest2.name
-    print('\nYou have selected ' + fest2.name + fest2.greeting)
-    print('\nHere is the lineup: \n')
-    print (*fest2.lineup, sep = "\n")
+    festInfo(fest2)
 
   elif (userFestival == '3'):
-    name = fest3.name
-    print('\nYou have selected ' + fest3.name + fest3.greeting)
-    print('\nHere is the lineup: \n' + fest3.lineup)
+    festInfo(fest3)
+      
   elif (userFestival == '4'):
-    name = fest4.name
-    print('\nYou have selected ' + fest4.name + fest4.greeting)
-    print('\nHere is the lineup: \n')
-    print (*fest.lineup, sep = "\n")
+    festInfo(fest4)
+
   elif (userFestival == '5'):
-    name = fest5.name
-    print('\nYou have selected ' + fest5.name + fest5.greeting)
-    print('\nHere is the lineup: \n' + fest5.lineup)
+    festInfo(fest5)
+      
   else: 
     print('\nError: please enter a valid option number.')
 
@@ -118,15 +45,14 @@ userFestival = input('\nWhich festival are you attending? (enter number only)\n'
 
 festivalSelection(userFestival) 
 
-# Function for option to return to main menu (add loop later)
 
 
 
 
 
-# Here is the lineup for the festival
-# Select 
-
+# Try again do-while loop for option to return to main menu (add loop later)
+# Loop for error message
+# Function for selecting and printing only desired sets
 
 
     
