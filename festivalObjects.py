@@ -1,4 +1,4 @@
-from Festival import *
+from festivalClass import *
 # Objects for festivals
 
 
