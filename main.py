@@ -43,7 +43,13 @@ run = True
 while run == True:
 
   # Print welcome statement
-  print('\nWelcome to "My Line-Up", an application for setting your\n own personal line-up for music festival set lists.\n');
+  print('\nWelcome to "My Line-Up", an application for setting your\n own personal line-up from music festival set lists.\n');
+
+  # Print ascii art logo
+  
+  logo = '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀\n⠀⣠⠶⠛⢶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠟⠉⠀⠈⠙⣧\n⣼⠁⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⣼\n⣿⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⠀⠀⠀⠀⠀⢰⠏\n⢻⡀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⢠⡟⠀\n⠸⡇⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⣼⠁⠀\n⠀⣿⠀⠀⠀⠸⣇⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⢠⡟⠀⠀\n⠀⠸⣇⠀⠀⠀⢻⣀⡶⠋⠉⠙⣷⣠⡾⠛⠛⢷⣼⡇⠀⠀⠀⠀⢸⡇⠀⠀\n⠀⠀⢹⡄⠀⠀⢘⡿⠁⠀⠀⠀⣸⠏⠀⠀⠀⠀⢿⡇⠀⠀⠀⠀⣾⠀⠀⠀\n⠀⠀⠀⢻⡄⠀⣸⠇⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⡟⠀⠀⠀\n⠀⠀⠀⣼⠀⠀⡿⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⢰⡇⠀⠀⠀\n⠀⠀⠀⣿⠀⢰⡇⠸⠿⠿⢧⣿⠀⣤⡶⠛⠛⠛⠻⢦⣤⡀⠀⢸⠇⠀⠀⠀\n⠀⠀⠀⣿⠀⠈⣧⠀⠀⠀⠀⣿⡀⣿⠀⠀⠀⢀⣶⣦⠌⠙⠷⣿⠀⠀⠀⠀\n⠀⠀⠀⢻⡀⠀⠘⠳⠶⠴⠾⡿⠷⣿⡄⢀⣤⣾⡿⠋⠀⠀⠀⠈⢳⡄⠀⠀\n⠀⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⢇⠀⠀⠙⢶⣌⡉⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀\n⠀⠀⠀⠀⠘⢷⣄⠀⠀⠀⠀⠈⠂⠀⠀⠀⠈⠙⠳⠶⣤⣤⣀⣠⡴⠏⠀⠀\n⠀⠀⠀⠀⠀⠀⠉⠛⢶⡆⠀⠀⠀⠀⠀⠀⠀⣠⣤⠶⠋⠁⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⢹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⢙⠂⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\n'  
+  
+  print(logo)
 
   # Print festival options 
   print('Here are the upcoming festivals:\n')
