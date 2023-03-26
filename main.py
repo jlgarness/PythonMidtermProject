@@ -1,8 +1,20 @@
-# ADD COMMENT REQUIREMENTS HERE
+# INF360 - Programming in Python
+# Jodi Garness
+# Midterm Project
+
+# Description: This project is intended to be used by concert-goers who are interested in mapping out their day when attending music festivals. Music festival lineups can often be overwhelming, but with this program, users can select the bands they wish to see and create a curated schedule for their selected event. 
+
 from festivalClass import *
 from festivalObjects import *
 
+# Print welcome statement
+print('\nWelcome to "My Line-Up", an application for setting your\n own personal line-up from music festival set lists.\n');
 
+# Print ascii art logo
+  
+logo = '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀\n⠀⣠⠶⠛⢶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠟⠉⠀⠈⠙⣧\n⣼⠁⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⣼\n⣿⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⠀⠀⠀⠀⠀⢰⠏\n⢻⡀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⢠⡟⠀\n⠸⡇⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⣼⠁⠀\n⠀⣿⠀⠀⠀⠸⣇⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⢠⡟⠀⠀\n⠀⠸⣇⠀⠀⠀⢻⣀⡶⠋⠉⠙⣷⣠⡾⠛⠛⢷⣼⡇⠀⠀⠀⠀⢸⡇⠀⠀\n⠀⠀⢹⡄⠀⠀⢘⡿⠁⠀⠀⠀⣸⠏⠀⠀⠀⠀⢿⡇⠀⠀⠀⠀⣾⠀⠀⠀\n⠀⠀⠀⢻⡄⠀⣸⠇⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⡟⠀⠀⠀\n⠀⠀⠀⣼⠀⠀⡿⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⢰⡇⠀⠀⠀\n⠀⠀⠀⣿⠀⢰⡇⠸⠿⠿⢧⣿⠀⣤⡶⠛⠛⠛⠻⢦⣤⡀⠀⢸⠇⠀⠀⠀\n⠀⠀⠀⣿⠀⠈⣧⠀⠀⠀⠀⣿⡀⣿⠀⠀⠀⢀⣶⣦⠌⠙⠷⣿⠀⠀⠀⠀\n⠀⠀⠀⢻⡀⠀⠘⠳⠶⠴⠾⡿⠷⣿⡄⢀⣤⣾⡿⠋⠀⠀⠀⠈⢳⡄⠀⠀\n⠀⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⢇⠀⠀⠙⢶⣌⡉⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀\n⠀⠀⠀⠀⠘⢷⣄⠀⠀⠀⠀⠈⠂⠀⠀⠀⠈⠙⠳⠶⣤⣤⣀⣠⡴⠏⠀⠀\n⠀⠀⠀⠀⠀⠀⠉⠛⢶⡆⠀⠀⠀⠀⠀⠀⠀⣠⣤⠶⠋⠁⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⢹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⢙⠂⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\n'  
+  
+print(logo)
 
 # festInfo function to call within festivalSelection
 def festInfo(obj):
@@ -10,7 +22,6 @@ def festInfo(obj):
   print('\nHere is the lineup for ' + obj.name + ':\n')
   for i in obj.lineup :
       print( i, "-------------", obj.lineup[i], sep = '\t') 
-
 
 # Function to select appropriate festival
 def festivalSelection(userFestival):
@@ -33,23 +44,11 @@ def festivalSelection(userFestival):
 def isValidEntry(input):
   if (input) == 1 or 2 or 3 or 4 or 5:
     return True
-      
-  
-      
-  
+     
 # User input for festival choice
 run = True
 
 while run == True:
-
-  # Print welcome statement
-  print('\nWelcome to "My Line-Up", an application for setting your\n own personal line-up from music festival set lists.\n');
-
-  # Print ascii art logo
-  
-  logo = '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⡀⠀\n⠀⣠⠶⠛⢶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⠟⠉⠀⠈⠙⣧\n⣼⠁⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⣼\n⣿⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡏⠀⠀⠀⠀⠀⢰⠏\n⢻⡀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⢠⡟⠀\n⠸⡇⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⣼⠁⠀\n⠀⣿⠀⠀⠀⠸⣇⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⡏⠀⠀⠀⠀⢠⡟⠀⠀\n⠀⠸⣇⠀⠀⠀⢻⣀⡶⠋⠉⠙⣷⣠⡾⠛⠛⢷⣼⡇⠀⠀⠀⠀⢸⡇⠀⠀\n⠀⠀⢹⡄⠀⠀⢘⡿⠁⠀⠀⠀⣸⠏⠀⠀⠀⠀⢿⡇⠀⠀⠀⠀⣾⠀⠀⠀\n⠀⠀⠀⢻⡄⠀⣸⠇⠀⠀⠀⢠⡟⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀⠀⡟⠀⠀⠀\n⠀⠀⠀⣼⠀⠀⡿⠀⠀⠀⠀⣸⠃⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⢰⡇⠀⠀⠀\n⠀⠀⠀⣿⠀⢰⡇⠸⠿⠿⢧⣿⠀⣤⡶⠛⠛⠛⠻⢦⣤⡀⠀⢸⠇⠀⠀⠀\n⠀⠀⠀⣿⠀⠈⣧⠀⠀⠀⠀⣿⡀⣿⠀⠀⠀⢀⣶⣦⠌⠙⠷⣿⠀⠀⠀⠀\n⠀⠀⠀⢻⡀⠀⠘⠳⠶⠴⠾⡿⠷⣿⡄⢀⣤⣾⡿⠋⠀⠀⠀⠈⢳⡄⠀⠀\n⠀⠀⠀⠘⣧⠀⠀⠀⠀⠀⠀⢇⠀⠀⠙⢶⣌⡉⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀\n⠀⠀⠀⠀⠘⢷⣄⠀⠀⠀⠀⠈⠂⠀⠀⠀⠈⠙⠳⠶⣤⣤⣀⣠⡴⠏⠀⠀\n⠀⠀⠀⠀⠀⠀⠉⠛⢶⡆⠀⠀⠀⠀⠀⠀⠀⣠⣤⠶⠋⠁⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠈⡇⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⢹⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀\n⠀⠀⠀⠀⠀⠀⠀⠀⠀⢙⠂⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀\n\n'  
-  
-  print(logo)
 
   # Print festival options 
   print('Here are the upcoming festivals:\n')
@@ -64,27 +63,29 @@ while run == True:
     break
     #continue
     
-  restart = input('\nWould you like to try again? If so, type "Yes".\n\n')
-  if restart == "yes" or "Yes":
+  restart = str(input('\nWould you like to try again? (enter y/n).\n\n'))
+  if restart == 'y':
     print('\nOk, restarting...')
     run == True
-  else:
+    continue
+  elif restart == 'n':
     print('Ok. See you soon! Enjoy your show.')
     run == False
     break
+  else:
+    print('Invalid entry, please try again.')
+    run == True
+    continue
       
        
   
   
+# To be implemented for final project:
 
-
-
-
-
-
-# Try again do-while loop for option to return to main menu (add loop later)
-# Loop for error message
-# Function for selecting and printing only desired sets
+    # User selection of specific bands / set times
+    # Notification of overlapping bands, alerting user of scheduling error
+    # Information for stage mapping
+    
 
 
     
